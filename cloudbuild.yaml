@@ -1,8 +1,8 @@
 steps:
   - name: 'gcr.io/cloud-builders/mvn'
-    args: ['install -DskipTests']
+    args: ['install',' -DskipTests']
   - name: 'gcr.io/cloud-builders/mvn'
-    args: ['appengine:deploy -DskipTests']
+    args: ['appengine:deploy','-DskipTests']
 #  - name: 'gcr.io/cloud-builders/docker'
 #    args: ['build', '--tag=gcr.io/$PROJECT_ID/spring-boot', '.']
 #images: ['gcr.io/$PROJECT_ID/spring-boot']
