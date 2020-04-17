@@ -24,7 +24,10 @@ public class HomeController {
         int totalReportedCases= allStats.stream().mapToInt(stat->stat.getLatestTotalCases()).sum();
         int totalNewCases= allStats.stream().mapToInt(stat->stat.getDiffFromPrevDay()).sum();
 
-        model.addAttribute("locationStat",allStats); //getAllstats() is getter in Service
+        allStats.stream().forEach(state_var-> System.out.println(state_var.getState()));
+
+
+        model.addAttribute("allStats",allStats); //getAllstats() is getter in Service
         model.addAttribute("totalReportedCases",totalReportedCases);
         model.addAttribute("totalNewCases",totalNewCases);
             return "home";  // this should map to home.html

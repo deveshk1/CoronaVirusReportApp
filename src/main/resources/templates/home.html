@@ -31,14 +31,14 @@
 
 <table class="table table-striped table-dark">
     <tr>
+        <th>State</th>
         <th>Country</th>
-        <!--<th>Country</th> -->
         <th>Total Cases Reported</th>
         <th>Changes since last Day</th>
     </tr>
-    <tr th:each="locationStat : ${locationStat}">
-        <td th:text="${locationStat.state}"></td>  <!--- here STATE =COUNTRY->
-        <!--<td th:text="${locationStat.country}"></td>-->
+    <tr th:each="locationStat : ${allStats}">
+        <td th:text="${locationStat.state}"></td>  <!--- here STATE =COUNTRY-->
+        <td th:text="${locationStat.country}"></td>
         <td th:text="${locationStat.latestTotalCases}">0</td>
         <td th:text="${locationStat.diffFromPrevDay}">0</td>
     </tr>

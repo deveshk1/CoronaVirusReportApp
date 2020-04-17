@@ -9,12 +9,23 @@ public class LocationStats {
     private int latestTotalCases;
     private  int diffFromPrevDay;
 
-//getter methods
+    @Override
+    public String toString() {
+        return "LocationStats{" +
+                "state='" + state + '\'' +
+                ", country='" + country + '\'' +
+                ", latestTotalCases=" + latestTotalCases +
+                ", diffFromPrevDay=" + diffFromPrevDay +
+                '}';
+    }
+
+    //getter methods
+
+
     public String getState() {
         return state;
     }
 
-    //setter methods
     public void setState(String state) {
         this.state = state;
     }
@@ -43,12 +54,4 @@ public class LocationStats {
         this.diffFromPrevDay = diffFromPrevDay;
     }
 
-    @Override
-    public String toString() {
-        return "LocationStats{" +
-                "state='" + state + '\'' +
-                ", country='" + country + '\'' +
-                ", latestTotalCases=" + latestTotalCases +
-                '}';
-    }
 }
