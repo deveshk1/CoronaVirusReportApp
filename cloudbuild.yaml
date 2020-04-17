@@ -1,6 +1,10 @@
 steps:
   - name: 'gcr.io/cloud-builders/mvn'
-    args: ['install']
+    args: ['install -DskipTests']
 #  - name: 'gcr.io/cloud-builders/docker'
 #    args: ['build', '--tag=gcr.io/$PROJECT_ID/spring-boot', '.']
 #images: ['gcr.io/$PROJECT_ID/spring-boot']
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/CoronaVirusReportApp', '.']
+images: ['gcr.io/$PROJECT_ID/CoronaVirusReportApp']
