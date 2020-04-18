@@ -1,6 +1,5 @@
 package io.corona.coronavirustracker.services;
 
-
 import io.corona.coronavirustracker.models.LocationStats;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
